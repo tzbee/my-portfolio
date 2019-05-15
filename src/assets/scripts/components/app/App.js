@@ -15,7 +15,7 @@ const App = () => {
 						<div className="menu">
 							<div className="menu-items">
 								<Link to="/" className="menu-item">
-									ME
+									HOME
 								</Link>
 								<Link to="/projects" className="menu-item">
 									PROJECTS

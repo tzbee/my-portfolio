@@ -4,8 +4,9 @@ import React from 'react';
 import AboutMe from './AboutMe';
 import MyProjects from './MyProjects';
 import Contact from './Contact';
+import MenuItems from './MenuItems';
 
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const App = () => {
 	return (
@@ -14,17 +15,7 @@ const App = () => {
 				<div className="App-content">
 					<div className="App-menu">
 						<div className="menu">
-							<div className="menu-items">
-								<Link to="/" className="menu-item">
-									HOME
-								</Link>
-								<Link to="/projects" className="menu-item">
-									PROJECTS
-								</Link>
-								<Link to="/contact" className="menu-item">
-									CONTACT
-								</Link>
-							</div>
+							<Route path="/:id*" component={MenuItems} />
 						</div>
 					</div>
 					<Route

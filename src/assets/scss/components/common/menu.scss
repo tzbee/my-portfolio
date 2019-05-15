@@ -12,7 +12,7 @@
 		text-decoration: none;
 	}
 
-	.menu-items {
+	.MenuItems {
 		display: flex;
 		flex-flow: row;
 		color: $LYNX_WHITE;
@@ -31,8 +31,10 @@
 			cursor: pointer;
 			border-bottom: solid 0.2em rgba(0, 0, 0, 0);
 
-			&.selected,
-			&:hover {
+			&:hover:not(.menu-item--selected) {
+				color: $HINT_OF_PENSIVE;
+			}
+			&.menu-item--selected {
 				border-bottom: solid 0.2em $FLOWER;
 			}
 		}

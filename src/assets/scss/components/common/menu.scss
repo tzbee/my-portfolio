@@ -7,6 +7,11 @@
 	align-items: center;
 	justify-content: center;
 
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
 	.menu-items {
 		display: flex;
 		flex-flow: row;

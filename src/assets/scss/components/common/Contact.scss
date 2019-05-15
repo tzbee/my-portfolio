@@ -1,0 +1,29 @@
+// Contact.scss
+
+.Contact {
+	display: flex;
+	padding: 1.2em 2em 1.2em 2em;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	color: $LYNX_WHITE;
+	font-size: 1.2em;
+	font-family: 'Comfortaa';
+	strong {
+		font-weight: bold;
+	}
+	p {
+		width: 20em;
+		display: flex;
+		justify-content: space-between;
+	}
+	a {
+		text-decoration: underline;
+		cursor: pointer;
+		color: inherit;
+
+		&:hover {
+			color: $HINT_OF_PENSIVE;
+		}
+	}
+}

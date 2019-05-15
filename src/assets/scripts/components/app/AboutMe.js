@@ -8,13 +8,18 @@ const AboutMe = ({ className = '' }) => {
 		<div className={`AboutMe ${className}`}>
 			<p>Hi, </p>
 			<p>My name is Amine.</p>
-			<p>I am a full stack developer.</p>
+			<p>
+				I am a <strong>software enthousiast</strong> and{' '}
+				<strong>full stack web developer</strong>.
+			</p>
 			<div className="AboutMe-footer">
 				<div className="AboutMe-btn-wrp">
-					<button className="AboutMe-btn">Hire me</button>
+					<button className="AboutMe-btn">Check my stuff</button>
 				</div>
 				<div className="AboutMe-btn-wrp">
-					<button className="AboutMe-btn">Check my stuff</button>
+					<button className="AboutMe-btn AboutMe-hire-btn">
+						Hire me
+					</button>
 				</div>
 			</div>
 		</div>

@@ -3,6 +3,7 @@
 import React from 'react';
 import AboutMe from './AboutMe';
 import MyProjects from './MyProjects';
+import Contact from './Contact';
 
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
@@ -47,7 +48,9 @@ const App = () => {
 						<Route
 							path="/contact"
 							component={() => (
-								<div className="App-contact">CONTACT</div>
+								<div className="App-contact">
+									<Contact />
+								</div>
 							)}
 						/>
 						<Route

@@ -9,20 +9,24 @@
 	color: $LYNX_WHITE;
 	font-size: 2.4em;
 	font-family: 'Comfortaa';
-	font-weight: bold;
+	// font-weight: bold;
 	flex-flow: column;
 
 	p {
-		display: flex;
-		justify-content: center;
 		margin: 0;
 		padding: 0;
+		text-align: center;
+		padding: 0.2em;
+	}
+
+	strong {
+		font-weight: bold;
 	}
 
 	.AboutMe-footer {
 		display: flex;
 		justify-content: center;
-		padding: 0.8em;
+		padding: 1em 0.8em 1em 0.8em;
 		box-sizing: border-box;
 
 		.AboutMe-btn-wrp {
@@ -42,6 +46,10 @@
 					color: $FLOWER;
 					border-color: $FLOWER;
 				}
+			}
+			.AboutMe-hire-btn {
+				background-color: #e84118;
+				border-color: #e84118;
 			}
 		}
 	}

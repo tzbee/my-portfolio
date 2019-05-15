@@ -9,7 +9,6 @@
 	color: $LYNX_WHITE;
 	font-size: 2.4em;
 	font-family: 'Comfortaa';
-	// font-weight: bold;
 	flex-flow: column;
 
 	p {
@@ -23,33 +22,39 @@
 		font-weight: bold;
 	}
 
+	a {
+		text-decoration: none;
+	}
+
 	.AboutMe-footer {
 		display: flex;
-		justify-content: center;
-		padding: 1em 0.8em 1em 0.8em;
 		box-sizing: border-box;
+		justify-content: space-around;
+		padding: 1em 0 1em 0;
 
-		.AboutMe-btn-wrp {
-			padding: 0 0.8em 0 0.8em;
-			.AboutMe-btn {
-				font-size: 0.7em;
-				background-color: rgba(0, 0, 0, 0);
-				border: solid 0.1em $LYNX_WHITE;
-				color: $LYNX_WHITE;
-				padding: 0.3em 0.4em 0.3em 0.5em;
-				border-radius: 0.1em;
-				font-family: inherit;
-				cursor: pointer;
-				outline: none;
-
-				&:hover {
-					color: $FLOWER;
-					border-color: $FLOWER;
-				}
+		.AboutMe-btn {
+			font-size: 0.7em;
+			background-color: rgba(0, 0, 0, 0);
+			border: solid 0.1em $LYNX_WHITE;
+			color: $LYNX_WHITE;
+			padding: 0.3em 0.5em 0.3em 0.5em;
+			border-radius: 0.2em;
+			font-family: inherit;
+			cursor: pointer;
+			outline: none;
+		}
+		.AboutMe-checkStuff-btn {
+			&:hover {
+				color: $FLOWER;
+				border-color: $FLOWER;
 			}
-			.AboutMe-hire-btn {
-				background-color: #e84118;
-				border-color: #e84118;
+		}
+		.AboutMe-hire-btn {
+			background-color: #e84118;
+			border-color: #e84118;
+
+			&:hover {
+				font-weight: bold;
 			}
 		}
 	}

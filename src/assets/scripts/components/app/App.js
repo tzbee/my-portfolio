@@ -4,7 +4,7 @@ import React from 'react';
 import AboutMe from './AboutMe';
 import MyProjects from './MyProjects';
 
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 const App = () => {
 	return (
@@ -35,18 +35,29 @@ const App = () => {
 							</div>
 						)}
 					/>
-					<Route
-						path="/projects"
-						component={() => (
-							<div className="App-projects">
-								<MyProjects />
-							</div>
-						)}
-					/>
-					<Route
-						path="/contact"
-						component={() => <div className="App-contact" />}
-					/>
+					<Switch>
+						<Route
+							path="/projects"
+							component={() => (
+								<div className="App-projects">
+									<MyProjects />
+								</div>
+							)}
+						/>
+						<Route
+							path="/contact"
+							component={() => (
+								<div className="App-contact">CONTACT</div>
+							)}
+						/>
+						<Route
+							component={() => (
+								<div className="App-aboutMe">
+									<AboutMe />
+								</div>
+							)}
+						/>
+					</Switch>
 				</div>
 			</div>
 		</Router>

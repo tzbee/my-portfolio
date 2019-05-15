@@ -3,6 +3,8 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
+const path = require('path');
+
 if (app.get('env') == 'development') {
 	var browserSync = require('browser-sync');
 	var config = {
@@ -22,5 +24,9 @@ if (app.get('env') == 'development') {
 }
 
 app.use('/', express.static('public'));
+
+app.use('/', (req, res) => {
+	res.sendFile(path.join(__dirname, 'public/index.html'));
+});
 
 app.listen(port, () => console.log(`Server started on port ${port}`));

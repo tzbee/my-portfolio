@@ -1,7 +1,7 @@
 {
-  "name": "react-web-app",
+  "name": "my-portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "My web dev portfolio",
   "main": "server.js",
   "scripts": {
     "build-prod": "webpack --config webpack.prod.js",

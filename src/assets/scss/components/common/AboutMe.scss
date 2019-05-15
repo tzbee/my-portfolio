@@ -1,6 +1,6 @@
-// about-me.scss
+// AboutMe.scss
 
-.about-me {
+.AboutMe {
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -19,15 +19,15 @@
 		padding: 0;
 	}
 
-	.about-me-footer {
+	.AboutMe-footer {
 		display: flex;
 		justify-content: center;
 		padding: 0.8em;
 		box-sizing: border-box;
 
-		.about-me-btn-wrp {
+		.AboutMe-btn-wrp {
 			padding: 0 0.8em 0 0.8em;
-			.about-me-btn {
+			.AboutMe-btn {
 				font-size: 0.7em;
 				background-color: rgba(0, 0, 0, 0);
 				border: solid 0.1em $LYNX_WHITE;

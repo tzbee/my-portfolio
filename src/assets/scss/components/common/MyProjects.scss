@@ -1,0 +1,23 @@
+// MyProjects.scss;
+
+.MyProjects {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	padding: 3em;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.Project {
+		width: 25.6em;
+		height: 16em;
+		padding: 2em;
+		box-sizing: border-box;
+		.Project-thumbnail {
+			background-color: $LYNX_WHITE;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

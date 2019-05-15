@@ -1,0 +1,48 @@
+// about-me.scss
+
+.about-me {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	padding: 2em;
+	box-sizing: border-box;
+	color: $LYNX_WHITE;
+	font-size: 2.4em;
+	font-family: 'Comfortaa';
+	font-weight: bold;
+	flex-flow: column;
+
+	p {
+		display: flex;
+		justify-content: center;
+		margin: 0;
+		padding: 0;
+	}
+
+	.about-me-footer {
+		display: flex;
+		justify-content: center;
+		padding: 0.8em;
+		box-sizing: border-box;
+
+		.about-me-btn-wrp {
+			padding: 0 0.8em 0 0.8em;
+			.about-me-btn {
+				font-size: 0.7em;
+				background-color: rgba(0, 0, 0, 0);
+				border: solid 0.1em $LYNX_WHITE;
+				color: $LYNX_WHITE;
+				padding: 0.3em 0.4em 0.3em 0.5em;
+				border-radius: 0.1em;
+				font-family: inherit;
+				cursor: pointer;
+				outline: none;
+
+				&:hover {
+					color: $FLOWER;
+					border-color: $FLOWER;
+				}
+			}
+		}
+	}
+}

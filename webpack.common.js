@@ -3,6 +3,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const pages = require('./src/data/pages');
 
@@ -23,12 +24,25 @@ module.exports = {
 				}
 			},
 			{
+				test: /\.(jpg|png|gif|woff|eot|ttf|svg)/,
+				use: {
+					loader: 'url-loader',
+					options: {
+						limit: 50000,
+						name: '[name].[ext]',
+						publicPath: '/',
+						outputPath: 'assets/img'
+					}
+				}
+			},
+			{
 				test: /\.scss$/,
 				use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
 			}
 		]
 	},
 	plugins: [
+		new CopyWebpackPlugin([{ from: 'img', to: 'img/' }]),
 		new CleanWebpackPlugin([path.resolve(__dirname, 'public')]),
 		...pages.map(
 			({ id, data }) =>

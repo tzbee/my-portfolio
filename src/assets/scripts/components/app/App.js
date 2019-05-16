@@ -25,6 +25,8 @@ const projects = [
 	{ id: 3, title: 'Project 3', thumbnail: path.join(PROJECT_DIR, 'pj3.png') }
 ];
 
+const resumeURL = 'resources/resume.pdf';
+
 const App = () => {
 	return (
 		<Router>
@@ -64,7 +66,7 @@ const App = () => {
 						<Route
 							component={() => (
 								<div className="App-aboutMe">
-									<AboutMe />
+									<AboutMe resumeURL={resumeURL} />
 								</div>
 							)}
 						/>

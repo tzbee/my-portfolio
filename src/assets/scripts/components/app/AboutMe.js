@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import { Link } from 'react-router-dom';
 
-const AboutMe = ({ className = '' }) => {
+const AboutMe = ({ className = '', resumeURL }) => {
 	return (
 		<div className={`AboutMe ${className}`}>
 			<p>Hi, </p>
@@ -24,7 +24,8 @@ const AboutMe = ({ className = '' }) => {
 				<a
 					className="AboutMe-btn AboutMe-hire-btn"
 					target="_blank"
-					href="img/resume.pdf"
+					rel="noopener noreferrer"
+					href={resumeURL}
 				>
 					Hire me
 				</a>
@@ -36,7 +37,8 @@ const AboutMe = ({ className = '' }) => {
 AboutMe.displayName = 'AboutMe';
 
 AboutMe.propTypes = {
-	className: PropTypes.string
+	className: PropTypes.string,
+	resumeURL: PropTypes.string
 };
 
 export default AboutMe;

@@ -42,7 +42,10 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new CopyWebpackPlugin([{ from: 'img', to: 'img/' }]),
+		new CopyWebpackPlugin([
+			{ from: 'img', to: 'img/' },
+			{ from: 'resources', to: 'resources/' }
+		]),
 		new CleanWebpackPlugin([path.resolve(__dirname, 'public')]),
 		...pages.map(
 			({ id, data }) =>

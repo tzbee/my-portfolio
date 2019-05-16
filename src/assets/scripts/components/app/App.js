@@ -8,6 +8,23 @@ import MenuItems from './MenuItems';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import path from 'path';
+
+const PROJECT_DIR = path.join('img', 'projects');
+
+// Project data
+// [todo] store later
+const projects = [
+	{
+		id: 1,
+		title: 'Project 1',
+		thumbnail: path.join(PROJECT_DIR, 'pj1.png'),
+		url: 'http://www.nutricount.info'
+	},
+	{ id: 2, title: 'Project 2', thumbnail: path.join(PROJECT_DIR, 'pj2.png') },
+	{ id: 3, title: 'Project 3', thumbnail: path.join(PROJECT_DIR, 'pj3.png') }
+];
+
 const App = () => {
 	return (
 		<Router>
@@ -32,7 +49,7 @@ const App = () => {
 							path="/projects"
 							component={() => (
 								<div className="App-projects">
-									<MyProjects />
+									<MyProjects projects={projects} />
 								</div>
 							)}
 						/>

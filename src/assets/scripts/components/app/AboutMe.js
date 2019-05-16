@@ -21,9 +21,13 @@ const AboutMe = ({ className = '' }) => {
 				>
 					Check my stuff
 				</Link>
-				<button className="AboutMe-btn AboutMe-hire-btn">
+				<a
+					className="AboutMe-btn AboutMe-hire-btn"
+					target="_blank"
+					href="img/resume.pdf"
+				>
 					Hire me
-				</button>
+				</a>
 			</div>
 		</div>
 	);

@@ -10,14 +10,37 @@
 	justify-content: space-between;
 
 	.Project {
-		width: 25.6em;
-		height: 16em;
 		padding: 2em;
 		box-sizing: border-box;
-		.Project-thumbnail {
-			background-color: $LYNX_WHITE;
+		display: flex;
+		flex-flow: column;
+
+		.Project-url {
+			display: inline-block;
+			.Project-thumbnail {
+				width: 25.6em;
+				height: 16em;
+				background-color: $LYNX_WHITE;
+				border-radius: 0.25em;
+				overflow: hidden;
+				.Project-thumbnail-img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			.Project-thumbnail-empty {
+			}
+		}
+		.Project-footer {
 			width: 100%;
-			height: 100%;
+			height: 2em;
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			color: $LYNX_WHITE;
+			font-family: Comfortaa;
+			font-weight: bold;
 		}
 	}
 }

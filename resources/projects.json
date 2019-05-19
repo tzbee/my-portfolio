@@ -5,14 +5,15 @@
 		"thumbnail": "/img/projects/pj1.png",
 		"url": "http://www.nutricount.info",
 		"tags": [
-			"HTML",
+			"HTML5",
 			"CSS",
 			"JavaScript",
 			"React",
 			"Redux",
 			"Responsive",
 			"ExpressJS",
-			"NodeJS"
+			"NodeJS",
+			"Webpack"
 		]
 	},
 	{
@@ -27,7 +28,16 @@
 		"title": "Web Feeds chrome extension",
 		"thumbnail": "",
 		"url": "https://github.com/tzbee/web-feed-ext",
-		"tags": ["HTML", "CSS", "Chrome", "JavaScript", "React", "Redux"]
+		"tags": [
+			"HTML5",
+			"CSS",
+			"Chrome",
+			"JavaScript",
+			"React",
+			"Redux",
+			"JQuery",
+			"Webpack"
+		]
 	},
 	{
 		"id": 2,
@@ -35,7 +45,7 @@
 		"thumbnail": "/img/projects/pj2.png",
 		"url": "http://c4-webapp.herokuapp.com/",
 		"tags": [
-			"HTML",
+			"HTML5",
 			"CSS",
 			"JavaScript",
 			"Responsive",
@@ -45,7 +55,8 @@
 			"JQuery",
 			"ExpressJS",
 			"NodeJS",
-			"Game"
+			"Game",
+			"Grunt"
 		]
 	},
 	{
@@ -53,7 +64,7 @@
 		"title": "Tic Tac Toe",
 		"thumbnail": "/img/projects/pj3.png",
 		"url": "https://tzbee.herokuapp.com/",
-		"tags": ["HTML", "CSS", "JavaScript", "Game"]
+		"tags": ["HTML5", "CSS", "JavaScript", "Game"]
 	},
 	{
 		"id": 6,

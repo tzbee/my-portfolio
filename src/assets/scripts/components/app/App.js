@@ -17,11 +17,16 @@ const PROJECT_DIR = path.join('img', 'projects');
 const projects = [
 	{
 		id: 1,
-		title: 'Project 1',
+		title: 'Nutricount',
 		thumbnail: path.join(PROJECT_DIR, 'pj1.png'),
 		url: 'http://www.nutricount.info'
 	},
-	{ id: 2, title: 'Project 2', thumbnail: path.join(PROJECT_DIR, 'pj2.png') },
+	{
+		id: 2,
+		title: 'Connect 4',
+		thumbnail: path.join(PROJECT_DIR, 'pj2.png'),
+		url: 'http://c4-webapp.herokuapp.com/'
+	},
 	{ id: 3, title: 'Project 3', thumbnail: path.join(PROJECT_DIR, 'pj3.png') }
 ];
 

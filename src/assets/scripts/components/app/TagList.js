@@ -10,14 +10,16 @@ const TagList = ({
 	onSelectedTagsChange
 }) => {
 	const handleTagClick = tag => {
+		var newSelectedTags;
 		if (selectedTags.includes(tag)) {
-			selectedTags = selectedTags.filter(
+			newSelectedTags = selectedTags.filter(
 				selectedTag => selectedTag !== tag
 			);
 		} else {
 			selectedTags.push(tag);
+			newSelectedTags = selectedTags;
 		}
-		onSelectedTagsChange(selectedTags);
+		onSelectedTagsChange(newSelectedTags);
 	};
 
 	return (

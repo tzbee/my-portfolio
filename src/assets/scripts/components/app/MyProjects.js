@@ -21,6 +21,10 @@ class MyProjects extends Component {
 		this._filterProjects();
 	}
 
+	componentWillUnmount() {
+		debugger;
+	}
+
 	_filterProjects() {
 		this.setState(state => {
 			const { projects } = this.props;
@@ -53,7 +57,7 @@ class MyProjects extends Component {
 			<div className="MyProjects">
 				<TagList
 					tags={tags}
-					selectedTags={selectedTags}
+					selectedTags={selectedTags.slice()}
 					onSelectedTagsChange={newSelectedTags =>
 						this._handleSelectedTagsChange(newSelectedTags)
 					}

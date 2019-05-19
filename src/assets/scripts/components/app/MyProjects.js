@@ -27,6 +27,9 @@ class MyProjects extends Component {
 			const { selectedTags } = state;
 
 			const filteredProjects = projects.filter(({ tags = [] }) => {
+				if (tags.includes('*')) {
+					return true;
+				}
 				return selectedTags.every(selectedTag =>
 					tags.includes(selectedTag)
 				);

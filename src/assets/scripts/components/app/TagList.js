@@ -22,15 +22,18 @@ const TagList = ({
 
 	return (
 		<div className={`TagList ${className}`}>
-			{' '}
-			{tags.map(tag => (
-				<Tag
-					key={'tag-' + tag}
-					tag={tag}
-					selected={selectedTags.includes(tag)}
-					onClick={handleTagClick}
-				/>
-			))}
+			{tags.map(
+				tag =>
+					tag &&
+					tag !== '*' && (
+						<Tag
+							key={'tag-' + tag}
+							tag={tag}
+							selected={selectedTags.includes(tag)}
+							onClick={handleTagClick}
+						/>
+					)
+			)}
 		</div>
 	);
 };

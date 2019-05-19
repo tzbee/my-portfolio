@@ -1,0 +1,38 @@
+[
+	{
+		"id": 1,
+		"title": "Nutricount",
+		"thumbnail": "/img/projects/pj1.png",
+		"url": "http://www.nutricount.info",
+		"tags": ["HTML", "CSS", "JavaScript", "React", "Redux", "Responsive"]
+	},
+	{
+		"id": 2,
+		"title": "Connect 4",
+		"thumbnail": "/img/projects/pj2.png",
+		"url": "http://c4-webapp.herokuapp.com/",
+		"tags": [
+			"HTML",
+			"CSS",
+			"JavaScript",
+			"Responsive",
+			"BackboneJS",
+			"AI",
+			"Online",
+			"JQuery"
+		]
+	},
+	{
+		"id": 3,
+		"title": "Tic Tac Toe",
+		"thumbnail": "/img/projects/pj3.png",
+		"tags": ["HTML", "CSS", "JavaScript"]
+	},
+	{
+		"id": 4,
+		"title": "All projects",
+		"thumbnail": "",
+		"url": "https://github.com/tzbee",
+		"tags": ["*"]
+	}
+]

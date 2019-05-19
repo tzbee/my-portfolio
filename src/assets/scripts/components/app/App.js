@@ -2,9 +2,9 @@
 
 import React from 'react';
 import AboutMe from './AboutMe';
-import MyProjects from './MyProjects';
 import Contact from './Contact';
 import MenuItems from './MenuItems';
+import MyProjects from './MyProjects';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -27,8 +27,20 @@ const projects = [
 		thumbnail: path.join(PROJECT_DIR, 'pj2.png'),
 		url: 'http://c4-webapp.herokuapp.com/'
 	},
-	{ id: 3, title: 'Project 3', thumbnail: path.join(PROJECT_DIR, 'pj3.png') }
+	{
+		id: 3,
+		title: 'Project 3',
+		thumbnail: path.join(PROJECT_DIR, 'pj3.png')
+	},
+	{
+		id: 4,
+		title: 'Other projects',
+		thumbnail: path.join(PROJECT_DIR, ''),
+		url: 'https://github.com/tzbee'
+	}
 ];
+
+const tags = ['Javascript', 'React', 'Responsive'];
 
 const resumeURL = 'resources/resume.pdf';
 
@@ -56,7 +68,10 @@ const App = () => {
 							path="/projects"
 							component={() => (
 								<div className="App-projects">
-									<MyProjects projects={projects} />
+									<MyProjects
+										tags={tags}
+										projects={projects}
+									/>
 								</div>
 							)}
 						/>

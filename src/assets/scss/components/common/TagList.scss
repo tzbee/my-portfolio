@@ -1,0 +1,10 @@
+// TagList.scss
+
+.TagList {
+	.Tag {
+		cursor: pointer;
+		&.Tag-selected {
+			color: #eee;
+		}
+	}
+}

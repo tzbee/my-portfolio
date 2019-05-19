@@ -1,55 +1,68 @@
-// MyProjects.js;
+// MyProjects.js;tagstags
 
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const MyProjects = ({ className = '', projects = [] }) => {
-	return (
-		<div className={`MyProjects ${className}`}>
-			{projects.map(project => (
-				<Project key={'pj-' + project.id} project={project} />
-			))}
-		</div>
-	);
+import TagList from './TagList';
+import ProjectList from './ProjectList';
+
+const DEFAULT_STATE = {
+	selectedTags: [],
+	filteredProjects: []
 };
 
-const Project = ({ className = '', project = {} }) => {
-	const { title, thumbnail, url } = project;
-	return (
-		<div className={`Project ${className}`}>
-			<a
-				className="Project-url"
-				href={url}
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<div className="Project-thumbnail">
-					<img
-						className="Project-thumbnail-img"
-						src={thumbnail}
-						alt={title}
-					/>
-				</div>
-			</a>
-			<div className="Project-footer">
-				<div className="Project-title">{title}</div>
+class MyProjects extends Component {
+	constructor(props) {
+		super(props);
+		this.state = DEFAULT_STATE;
+	}
+
+	componentDidMount() {
+		this._filterProjects();
+	}
+
+	_filterProjects() {
+		this.setState(state => {
+			const { projects } = this.props;
+			const { selectedTags } = state;
+
+			const filteredProjects = projects.filter(({ tags = [] }) => {
+				return selectedTags.every(selectedTag =>
+					tags.includes(selectedTag)
+				);
+			});
+
+			return Object.assign({}, state, { filteredProjects });
+		});
+	}
+
+	_handleSelectedTagsChange(newSelectedTags) {
+		this.setState(state =>
+			Object.assign({}, state, { selectedTags: newSelectedTags })
+		);
+		this._filterProjects();
+	}
+
+	render() {
+		const { tags } = this.props;
+		const { filteredProjects, selectedTags } = this.state;
+		return (
+			<div className="MyProjects">
+				<TagList
+					tags={tags}
+					selectedTags={selectedTags}
+					onSelectedTagsChange={newSelectedTags =>
+						this._handleSelectedTagsChange(newSelectedTags)
+					}
+				/>
+				<ProjectList projects={filteredProjects} />
 			</div>
-		</div>
-	);
-};
-
-Project.displayName = 'Project';
-
-Project.propTypes = {
-	className: PropTypes.string,
-	project: PropTypes.object
-};
-
-MyProjects.displayName = 'MyProjects';
+		);
+	}
+}
 
 MyProjects.propTypes = {
-	className: PropTypes.string,
+	tags: PropTypes.array,
 	projects: PropTypes.array
 };
-
 export default MyProjects;

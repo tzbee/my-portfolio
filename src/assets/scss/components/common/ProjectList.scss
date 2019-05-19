@@ -29,9 +29,30 @@
 					overflow: hidden;
 					border-top-left-radius: 0.25em;
 					border-top-right-radius: 0.25em;
-					.Project-thumbnail-img {
-						width: 100%;
-						height: 100%;
+
+					&.Project-thumbnail-logo {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+
+					&.Project-thumbnail-smallLogo {
+						.Project-thumbnail-img {
+							width: 50%;
+						}
+					}
+
+					&.Project-thumbnail-bigLogo {
+						.Project-thumbnail-img {
+							width: 40%;
+						}
+					}
+
+					&:not(.Project-thumbnail-logo) {
+						.Project-thumbnail-img {
+							width: 100%;
+							height: 100%;
+						}
 					}
 				}
 

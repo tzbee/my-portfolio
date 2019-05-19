@@ -19,14 +19,14 @@
 	{
 		"id": 4,
 		"title": "Web Feeds",
-		"thumbnail": "",
+		"thumbnail": "/img/projects/Octocat.png",
 		"url": "https://github.com/tzbee/web-feed",
-		"tags": ["JavaScript", "NodeJS"]
+		"tags": ["JavaScript", "NodeJS", "GitHub"]
 	},
 	{
 		"id": 5,
 		"title": "Web Feeds chrome extension",
-		"thumbnail": "",
+		"thumbnail": "/img/projects/Octocat.png",
 		"url": "https://github.com/tzbee/web-feed-ext",
 		"tags": [
 			"HTML5",
@@ -36,7 +36,8 @@
 			"React",
 			"Redux",
 			"JQuery",
-			"Webpack"
+			"Webpack",
+			"GitHub"
 		]
 	},
 	{
@@ -69,7 +70,7 @@
 	{
 		"id": 6,
 		"title": "All projects",
-		"thumbnail": "",
+		"thumbnail": "/img/projects/GitHub-Mark-120px-plus.png",
 		"url": "https://github.com/tzbee",
 		"tags": ["*"]
 	}

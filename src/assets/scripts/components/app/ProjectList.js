@@ -16,7 +16,18 @@ const ProjectList = ({ className = '', projects = [] }) => {
 };
 
 const Project = ({ className = '', project = {} }) => {
-	const { title, thumbnail, url } = project;
+	const { title, thumbnail, url, tags } = project;
+
+	const additionalThumbnailClasses = {};
+
+	if (tags.includes('GitHub')) {
+		additionalThumbnailClasses['Project-thumbnail-smallLogo'] = true;
+		additionalThumbnailClasses['Project-thumbnail-logo'] = true;
+	} else if (tags.includes('*')) {
+		additionalThumbnailClasses['Project-thumbnail-bigLogo'] = true;
+		additionalThumbnailClasses['Project-thumbnail-logo'] = true;
+	}
+
 	return (
 		<div className={`Project ${className}`}>
 			<a
@@ -28,7 +39,12 @@ const Project = ({ className = '', project = {} }) => {
 				<div className="Project-header">
 					<div className="Project-title">{title}</div>
 				</div>
-				<div className="Project-thumbnail">
+				<div
+					className={
+						'Project-thumbnail ' +
+						Object.keys(additionalThumbnailClasses).join(' ')
+					}
+				>
 					<img
 						className="Project-thumbnail-img"
 						src={thumbnail}

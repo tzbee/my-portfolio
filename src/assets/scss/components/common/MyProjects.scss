@@ -10,8 +10,12 @@
 
 	.MyProjects-tagList {
 		flex: 0 0 4em;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 1em;
 	}
 	.MyProjects-list {
 		flex: 1 1 auto;
+		overflow: auto;
 	}
 }

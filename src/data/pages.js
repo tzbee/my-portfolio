@@ -1,6 +1,6 @@
 // pages.js
 
-const APP_TITLE = 'React Web App';
+const APP_TITLE = 'My portfolio';
 
 const common = {
 	title: APP_TITLE,

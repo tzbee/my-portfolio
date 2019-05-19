@@ -4,7 +4,16 @@
 		"title": "Nutricount",
 		"thumbnail": "/img/projects/pj1.png",
 		"url": "http://www.nutricount.info",
-		"tags": ["HTML", "CSS", "JavaScript", "React", "Redux", "Responsive"]
+		"tags": [
+			"HTML",
+			"CSS",
+			"JavaScript",
+			"React",
+			"Redux",
+			"Responsive",
+			"ExpressJS",
+			"NodeJS"
+		]
 	},
 	{
 		"id": 2,
@@ -19,7 +28,9 @@
 			"BackboneJS",
 			"AI",
 			"Online",
-			"JQuery"
+			"JQuery",
+			"ExpressJS",
+			"NodeJS"
 		]
 	},
 	{
@@ -30,6 +41,20 @@
 	},
 	{
 		"id": 4,
+		"title": "Web Feeds",
+		"thumbnail": "",
+		"url": "https://github.com/tzbee/web-feed",
+		"tags": ["Javascript", "NodeJS"]
+	},
+	{
+		"id": 5,
+		"title": "Web Feeds extension",
+		"thumbnail": "",
+		"url": "https://github.com/tzbee/web-feed-ext",
+		"tags": ["HTML", "CSS", "Chrome", "Javascript", "React", "Redux"]
+	},
+	{
+		"id": 6,
 		"title": "All projects",
 		"thumbnail": "",
 		"url": "https://github.com/tzbee",

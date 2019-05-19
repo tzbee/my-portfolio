@@ -24,7 +24,7 @@
 		margin: 0;
 		padding: 0;
 		grid-template-rows: 15em auto;
-		grid-template-columns: 20em 10em auto 10em 20em;
+		grid-template-columns: 10em 10em auto 10em 10em;
 		position: relative;
 
 		.App-menu {
@@ -34,6 +34,7 @@
 		.App-projects {
 			grid-row: 2 / 3;
 			grid-column: 2 / 5;
+			overflow: hidden;
 		}
 		.App-aboutMe {
 			grid-row: 2 / 3;

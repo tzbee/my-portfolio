@@ -6,9 +6,11 @@ import PropTypes from 'prop-types';
 const ProjectList = ({ className = '', projects = [] }) => {
 	return (
 		<div className={`ProjectList ${className}`}>
-			{projects.map(project => (
-				<Project key={'pj-' + project.id} project={project} />
-			))}
+			<div className="ProjectList-content">
+				{projects.map(project => (
+					<Project key={'pj-' + project.id} project={project} />
+				))}
+			</div>
 		</div>
 	);
 };
@@ -23,6 +25,9 @@ const Project = ({ className = '', project = {} }) => {
 				target="_blank"
 				rel="noopener noreferrer"
 			>
+				<div className="Project-header">
+					<div className="Project-title">{title}</div>
+				</div>
 				<div className="Project-thumbnail">
 					<img
 						className="Project-thumbnail-img"
@@ -31,9 +36,6 @@ const Project = ({ className = '', project = {} }) => {
 					/>
 				</div>
 			</a>
-			<div className="Project-footer">
-				<div className="Project-title">{title}</div>
-			</div>
 		</div>
 	);
 };

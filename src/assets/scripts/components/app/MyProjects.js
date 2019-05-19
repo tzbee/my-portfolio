@@ -21,10 +21,6 @@ class MyProjects extends Component {
 		this._filterProjects();
 	}
 
-	componentWillUnmount() {
-		debugger;
-	}
-
 	_filterProjects() {
 		this.setState(state => {
 			const { projects } = this.props;
@@ -55,14 +51,18 @@ class MyProjects extends Component {
 		const { filteredProjects, selectedTags } = this.state;
 		return (
 			<div className="MyProjects">
-				<TagList
-					tags={tags}
-					selectedTags={selectedTags.slice()}
-					onSelectedTagsChange={newSelectedTags =>
-						this._handleSelectedTagsChange(newSelectedTags)
-					}
-				/>
-				<ProjectList projects={filteredProjects} />
+				<div className="MyProjects-tagList">
+					<TagList
+						tags={tags}
+						selectedTags={selectedTags.slice()}
+						onSelectedTagsChange={newSelectedTags =>
+							this._handleSelectedTagsChange(newSelectedTags)
+						}
+					/>
+				</div>
+				<div className="MyProjects-list">
+					<ProjectList projects={filteredProjects} />
+				</div>
 			</div>
 		);
 	}

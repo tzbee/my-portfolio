@@ -31,6 +31,7 @@
 			cursor: pointer;
 			border-bottom: solid 0.2em rgba(0, 0, 0, 0);
 			outline: none;
+			user-select: none;
 
 			&:hover:not(.menu-item--selected) {
 				color: $HINT_OF_PENSIVE;

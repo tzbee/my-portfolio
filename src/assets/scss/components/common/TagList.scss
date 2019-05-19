@@ -17,6 +17,8 @@
 		justify-content: center;
 		align-items: center;
 		margin: 0.5em;
+		background-color: rgba(0, 0, 0, 0.2);
+		user-select: none;
 
 		&:hover {
 			color: $HINT_OF_PENSIVE;

@@ -42,6 +42,7 @@
 			font-family: inherit;
 			cursor: pointer;
 			outline: none;
+			user-select: none;
 		}
 		.AboutMe-checkStuff-btn {
 			&:hover {

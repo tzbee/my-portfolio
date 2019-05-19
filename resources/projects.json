@@ -16,6 +16,20 @@
 		]
 	},
 	{
+		"id": 4,
+		"title": "Web Feeds",
+		"thumbnail": "",
+		"url": "https://github.com/tzbee/web-feed",
+		"tags": ["JavaScript", "NodeJS"]
+	},
+	{
+		"id": 5,
+		"title": "Web Feeds chrome extension",
+		"thumbnail": "",
+		"url": "https://github.com/tzbee/web-feed-ext",
+		"tags": ["HTML", "CSS", "Chrome", "JavaScript", "React", "Redux"]
+	},
+	{
 		"id": 2,
 		"title": "Connect 4",
 		"thumbnail": "/img/projects/pj2.png",
@@ -27,31 +41,19 @@
 			"Responsive",
 			"BackboneJS",
 			"AI",
-			"Online",
+			"Socket.io",
 			"JQuery",
 			"ExpressJS",
-			"NodeJS"
+			"NodeJS",
+			"Game"
 		]
 	},
 	{
 		"id": 3,
 		"title": "Tic Tac Toe",
 		"thumbnail": "/img/projects/pj3.png",
-		"tags": ["HTML", "CSS", "JavaScript"]
-	},
-	{
-		"id": 4,
-		"title": "Web Feeds",
-		"thumbnail": "",
-		"url": "https://github.com/tzbee/web-feed",
-		"tags": ["Javascript", "NodeJS"]
-	},
-	{
-		"id": 5,
-		"title": "Web Feeds extension",
-		"thumbnail": "",
-		"url": "https://github.com/tzbee/web-feed-ext",
-		"tags": ["HTML", "CSS", "Chrome", "Javascript", "React", "Redux"]
+		"url": "https://tzbee.herokuapp.com/",
+		"tags": ["HTML", "CSS", "JavaScript", "Game"]
 	},
 	{
 		"id": 6,

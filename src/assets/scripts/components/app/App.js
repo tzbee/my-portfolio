@@ -19,7 +19,7 @@ const tags = Object.keys(
 			});
 			return tagMap;
 		}, {})
-);
+).sort();
 
 const resumeURL = 'resources/resume.pdf';
 

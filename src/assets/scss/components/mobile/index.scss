@@ -1,1 +1,71 @@
 // index.scss
+
+// Tablet
+@media (max-width: 100em) and (orientation: portrait) {
+	.App {
+		.App-content {
+			grid-template-columns: 0 0 auto 0 0;
+		}
+
+		&:before {
+			background-size: 3360px 2100px;
+		}
+	}
+
+	.ProjectList-content {
+		justify-content: center;
+	}
+}
+
+// Mobile
+@media (max-width: 50em) and (orientation: portrait) {
+	.App {
+		.App-content {
+			grid-template-columns: 0 0 auto 0 0;
+		}
+
+		&:before {
+			background-size: 3360px 2100px;
+		}
+	}
+
+	.ProjectList-content {
+		justify-content: center;
+	}
+}
+
+// Mobile landscape
+@media (max-width: 50em) and (orientation: landscape) {
+	body {
+		font-size: 0.6em;
+	}
+	.App {
+		.App-content {
+			grid-template-columns: 0 0 auto 0 0;
+		}
+
+		&:before {
+			background-size: 3360px 2100px;
+		}
+	}
+
+	.ProjectList-content {
+		justify-content: center;
+	}
+}
+
+// Small Mobile
+@media (max-width: 30em) and (orientation: portrait) {
+	.App {
+		.App-content {
+			grid-template-columns: 0 0 auto 0 0;
+		}
+
+		&:before {
+			background-size: 3360px 2100px;
+		}
+	}
+	body {
+		font-size: 0.6em;
+	}
+}

@@ -4,6 +4,7 @@
 @media (max-width: 150em) and (orientation: landscape) {
 	.App {
 		.App-content {
+			grid-template-rows: 15em auto;
 			grid-template-columns: 10em 20em auto 20em 10em;
 		}
 	}
@@ -16,6 +17,7 @@
 	}
 	.App {
 		.App-content {
+			grid-template-rows: 10em auto;
 			grid-template-columns: 0 10em auto 10em 0;
 		}
 	}

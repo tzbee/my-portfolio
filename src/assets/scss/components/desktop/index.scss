@@ -10,7 +10,7 @@
 	}
 }
 
-// Smaller screen desktop
+// Smaller screen desktop and tablets
 @media (max-width: 100em) and (orientation: landscape) {
 	body {
 		font-size: 0.9em;
@@ -19,6 +19,16 @@
 		.App-content {
 			grid-template-rows: 10em auto;
 			grid-template-columns: 0 10em auto 10em 0;
+		}
+	}
+
+	.ProjectList {
+		.ProjectList-content {
+			justify-content: center;
+
+			.Project {
+				font-size: 0.8em;
+			}
 		}
 	}
 }

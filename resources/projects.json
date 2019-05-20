@@ -63,7 +63,7 @@
 	{
 		"id": 3,
 		"title": "Tic Tac Toe",
-		"thumbnail": "/img/projects/pj3.png",
+		"thumbnail": "/img/projects/tictactoe.png",
 		"url": "https://tzbee.herokuapp.com/",
 		"tags": ["HTML5", "CSS", "JavaScript", "Game"]
 	},

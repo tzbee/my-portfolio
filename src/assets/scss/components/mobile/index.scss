@@ -7,9 +7,9 @@
 			grid-template-columns: 0 0 auto 0 0;
 		}
 
-		&:before {
-			background-size: 3360px 2100px;
-		}
+		// &:before {
+		// 	background-size: 3360px 2100px;
+		// }
 	}
 
 	.ProjectList-content {
@@ -24,9 +24,9 @@
 			grid-template-columns: 0 0 auto 0 0;
 		}
 
-		&:before {
-			background-size: 3360px 2100px;
-		}
+		// &:before {
+		// 	background-size: 3360px 2100px;
+		// }
 	}
 	.ProjectList {
 		.ProjectList-content {
@@ -60,9 +60,9 @@
 			grid-template-columns: 0 0 auto 0 0;
 		}
 
-		&:before {
-			background-size: 3360px 2100px;
-		}
+		// &:before {
+		// 	background-size: 3360px 2100px;
+		// }
 	}
 	.ProjectList {
 		.ProjectList-content {
@@ -78,18 +78,50 @@
 	}
 }
 
-// Small Mobile
+// Small-ish Mobile
 @media (max-width: 30em) and (orientation: portrait) {
 	.App {
 		.App-content {
 			grid-template-columns: 0 0 auto 0 0;
 		}
-
-		&:before {
-			background-size: 3360px 2100px;
-		}
 	}
 	body {
 		font-size: 0.6em;
+	}
+}
+
+// Small Mobile
+@media (max-width: 25em) and (orientation: portrait) {
+	.App {
+		.App-content {
+			grid-template-columns: 0 0 auto 0 0;
+		}
+	}
+	body {
+		font-size: 0.55em;
+	}
+}
+
+// Smallest Mobile
+@media (max-width: 20em) and (orientation: portrait) {
+	.App {
+		.App-content {
+			grid-template-columns: 0 0 auto 0 0;
+		}
+	}
+	body {
+		font-size: 0.5em;
+	}
+}
+
+// Smallest Mobile
+@media (max-height: 20em) and (orientation: landscape) {
+	.App {
+		.App-content {
+			grid-template-columns: 0 0 auto 0 0;
+		}
+	}
+	body {
+		font-size: 0.7em;
 	}
 }

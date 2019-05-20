@@ -28,9 +28,22 @@
 			background-size: 3360px 2100px;
 		}
 	}
+	.ProjectList {
+		.ProjectList-content {
+			justify-content: center;
 
-	.ProjectList-content {
-		justify-content: center;
+			.Project {
+				font-size: 1.2em;
+			}
+		}
+	}
+
+	.App .App-content .App-contact {
+		font-size: 1.4em;
+	}
+
+	.AboutMe {
+		font-size: 2.9em;
 	}
 }
 
@@ -48,9 +61,10 @@
 			background-size: 3360px 2100px;
 		}
 	}
-
-	.ProjectList-content {
-		justify-content: center;
+	.ProjectList {
+		.ProjectList-content {
+			justify-content: center;
+		}
 	}
 }
 

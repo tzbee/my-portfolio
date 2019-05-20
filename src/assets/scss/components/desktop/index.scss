@@ -1,7 +1,16 @@
 // index.scss
 
+// Bigger screen desktop
+@media (max-width: 150em) and (orientation: landscape) {
+	.App {
+		.App-content {
+			grid-template-columns: 10em 20em auto 20em 10em;
+		}
+	}
+}
+
 // Smaller screen desktop
-@media (max-width: 110em) and(orientation:landscape) {
+@media (max-width: 100em) and (orientation: landscape) {
 	body {
 		font-size: 0.9em;
 	}

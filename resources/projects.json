@@ -20,14 +20,14 @@
 	{
 		"id": 4,
 		"title": "Web Feeds",
-		"thumbnail": "/img/projects/Octocat.jpg",
+		"thumbnail": "/img/projects/Octocat.png",
 		"url": "https://github.com/tzbee/web-feed",
 		"tags": ["JavaScript", "NodeJS", "GitHub"]
 	},
 	{
 		"id": 5,
 		"title": "Web Feeds chrome extension",
-		"thumbnail": "/img/projects/Octocat.jpg",
+		"thumbnail": "/img/projects/Octocat.png",
 		"url": "https://github.com/tzbee/web-feed-ext",
 		"tags": [
 			"HTML5",

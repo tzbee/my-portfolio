@@ -36,7 +36,16 @@
 
 	.AboutMe {
 		font-size: 2.9em;
+
+		.AboutMe-footer {
+			flex-wrap: wrap;
+			.AboutMe-btn {
+				font-size: 1em;
+				margin: 0.5em;
+			}
+		}
 	}
+
 	.TagList {
 		width: 100%;
 	}

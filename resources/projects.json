@@ -44,7 +44,7 @@
 		"id": 2,
 		"title": "Connect 4",
 		"thumbnail": "/img/projects/pj2.png",
-		"url": "http://c4-webapp.herokuapp.com/",
+		"url": "http://connect4.tzbee.me",
 		"tags": [
 			"HTML5",
 			"CSS",
@@ -64,7 +64,7 @@
 		"id": 3,
 		"title": "Tic Tac Toe",
 		"thumbnail": "/img/projects/tictactoe.png",
-		"url": "https://tzbee.herokuapp.com/",
+		"url": "http://tictactoe.tzbee.me",
 		"tags": ["HTML5", "CSS", "JavaScript", "Game"]
 	},
 	{

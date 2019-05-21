@@ -13,7 +13,8 @@
 			"Responsive",
 			"ExpressJS",
 			"NodeJS",
-			"Webpack"
+			"Webpack",
+			"Sass"
 		]
 	},
 	{
@@ -37,7 +38,8 @@
 			"Redux",
 			"JQuery",
 			"Webpack",
-			"GitHub"
+			"GitHub",
+			"Sass"
 		]
 	},
 	{
@@ -65,7 +67,7 @@
 		"title": "Tic Tac Toe",
 		"thumbnail": "/img/projects/tictactoe.png",
 		"url": "http://tictactoe.tzbee.me",
-		"tags": ["HTML5", "CSS", "JavaScript", "Game"]
+		"tags": ["HTML5", "CSS", "JavaScript", "Game", "AI"]
 	},
 	{
 		"id": 6,

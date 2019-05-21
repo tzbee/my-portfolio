@@ -2,7 +2,7 @@
 	{
 		"id": 1,
 		"title": "Nutricount",
-		"thumbnail": "/img/projects/pj1.png",
+		"thumbnail": "/img/projects/pj1_thb.png",
 		"url": "http://www.nutricount.info",
 		"tags": [
 			"HTML5",
@@ -20,14 +20,14 @@
 	{
 		"id": 4,
 		"title": "Web Feeds",
-		"thumbnail": "/img/projects/Octocat.png",
+		"thumbnail": "/img/projects/Octocat.jpg",
 		"url": "https://github.com/tzbee/web-feed",
 		"tags": ["JavaScript", "NodeJS", "GitHub"]
 	},
 	{
 		"id": 5,
 		"title": "Web Feeds chrome extension",
-		"thumbnail": "/img/projects/Octocat.png",
+		"thumbnail": "/img/projects/Octocat.jpg",
 		"url": "https://github.com/tzbee/web-feed-ext",
 		"tags": [
 			"HTML5",
@@ -45,7 +45,7 @@
 	{
 		"id": 2,
 		"title": "Connect 4",
-		"thumbnail": "/img/projects/pj2.png",
+		"thumbnail": "/img/projects/pj2_thb.png",
 		"url": "http://connect4.tzbee.me",
 		"tags": [
 			"HTML5",
@@ -65,7 +65,7 @@
 	{
 		"id": 3,
 		"title": "Tic Tac Toe",
-		"thumbnail": "/img/projects/tictactoe.png",
+		"thumbnail": "/img/projects/tictactoe_thb.png",
 		"url": "http://tictactoe.tzbee.me",
 		"tags": ["HTML5", "CSS", "JavaScript", "Game", "AI"]
 	},

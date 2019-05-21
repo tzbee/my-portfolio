@@ -10,6 +10,15 @@
 	}
 }
 
+// Smaller screen all orientation
+@media (max-width: 100em) {
+	.App {
+		&:before {
+			background-image: url('/img/bg3_mobile.jpg');
+		}
+	}
+}
+
 // Smaller screen desktop and tablets
 @media (max-width: 100em) and (orientation: landscape) {
 	body {

@@ -45,9 +45,19 @@
 			user-select: none;
 		}
 		.AboutMe-checkStuff-btn {
+			display: flex;
+			flex-flow: row;
+			align-items: center;
+			justify-content: center;
 			&:hover {
 				color: $FLOWER;
 				border-color: $FLOWER;
+			}
+
+			.AboutMe-checkStuff-btn-text {
+			}
+			.AboutMe-checkStuff-btn-chevron {
+				margin-left: 1em;
 			}
 		}
 		.AboutMe-hire-btn {

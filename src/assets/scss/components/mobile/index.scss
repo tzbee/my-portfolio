@@ -13,7 +13,7 @@
 		.AboutMe-footer {
 			.AboutMe-btn {
 				text-align: center;
-				margin: 0.5em;
+				font-size: 0.9em;
 			}
 		}
 	}
@@ -24,6 +24,34 @@
 
 	.ProjectList-content {
 		justify-content: center;
+	}
+}
+
+// Mobile all
+@media (max-width: 60em) {
+	.AboutMe {
+		font-size: 2.9em;
+	}
+}
+
+// Mobile all landscape
+@media (max-width: 60em) and (orientation: landscape) {
+	.Contact {
+		font-size: 1.7em;
+	}
+}
+
+// big screen mobile
+@media (max-width: 60em) and (orientation: landscape) {
+	body {
+		font-size: 0.5em;
+	}
+
+	.App {
+		.App-content {
+			grid-template-rows: 10em auto;
+			grid-template-columns: 20em 0 auto 0 20em;
+		}
 	}
 }
 
@@ -49,12 +77,9 @@
 	}
 
 	.AboutMe {
-		font-size: 2.9em;
-
 		.AboutMe-footer {
 			flex-wrap: wrap;
 			.AboutMe-btn {
-				font-size: 1em;
 				margin: 0.5em;
 				padding: 0.4em 0.5em 0.4em 0.5em;
 			}
@@ -73,7 +98,7 @@
 	}
 	.App {
 		.App-content {
-			grid-template-columns: 0 0 auto 0 0;
+			grid-template-columns: 10em 0 auto 0 10em;
 		}
 	}
 	.ProjectList {
@@ -83,6 +108,10 @@
 				font-size: 0.8em;
 			}
 		}
+	}
+
+	.AboutMe {
+		font-size: 3.1em;
 	}
 
 	.TagList {
@@ -110,6 +139,9 @@
 		.App-content {
 			grid-template-columns: 0 0 auto 0 0;
 		}
+	}
+	.AboutMe {
+		font-size: 2.8em;
 	}
 	body {
 		font-size: 0.55em;

@@ -19,16 +19,19 @@ const AboutMe = ({ className = '', resumeURL }) => {
 					to="/projects"
 					className="AboutMe-btn AboutMe-checkStuff-btn"
 				>
-					Check my work
+					<span className="AboutMe-checkStuff-btn-text">
+						Check my work
+					</span>
+					<span className="AboutMe-checkStuff-btn-chevron fas fa-chevron-right" />
 				</Link>
-				<a
+				{/*				<a
 					className="AboutMe-btn AboutMe-hire-btn"
 					target="_blank"
 					rel="noopener noreferrer"
 					href={resumeURL}
 				>
 					Hire me
-				</a>
+				</a>*/}
 			</div>
 		</div>
 	);

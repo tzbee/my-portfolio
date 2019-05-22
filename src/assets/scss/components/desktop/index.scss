@@ -8,6 +8,15 @@
 			grid-template-columns: 10em 20em auto 20em 10em;
 		}
 	}
+
+	.AboutMe {
+		.AboutMe-footer {
+			.AboutMe-btn {
+				margin: 0.5em;
+				text-align: center;
+			}
+		}
+	}
 }
 
 // Smaller screen all orientation
@@ -40,6 +49,16 @@
 			.Project {
 				font-size: 0.8em;
 			}
+		}
+	}
+}
+
+// Smaller screen desktop and tablets
+@media (max-width: 70em) and (orientation: landscape) {
+	.App {
+		.App-content {
+			grid-template-rows: 10em auto;
+			grid-template-columns: auto 20em auto 20em auto;
 		}
 	}
 }

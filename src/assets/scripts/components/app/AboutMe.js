@@ -19,7 +19,7 @@ const AboutMe = ({ className = '', resumeURL }) => {
 					to="/projects"
 					className="AboutMe-btn AboutMe-checkStuff-btn"
 				>
-					Check my stuff
+					Check my work
 				</Link>
 				<a
 					className="AboutMe-btn AboutMe-hire-btn"

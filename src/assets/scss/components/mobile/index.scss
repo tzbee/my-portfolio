@@ -9,6 +9,15 @@
 		}
 	}
 
+	.AboutMe {
+		.AboutMe-footer {
+			.AboutMe-btn {
+				text-align: center;
+				margin: 0.5em;
+			}
+		}
+	}
+
 	.menu {
 		font-size: 0.9em;
 	}
@@ -47,6 +56,7 @@
 			.AboutMe-btn {
 				font-size: 1em;
 				margin: 0.5em;
+				padding: 0.4em 0.5em 0.4em 0.5em;
 			}
 		}
 	}
@@ -88,6 +98,7 @@
 			grid-template-columns: 0 0 auto 0 0;
 		}
 	}
+
 	body {
 		font-size: 0.6em;
 	}
@@ -107,6 +118,14 @@
 
 // Smallest Mobile
 @media (max-width: 20em) and (orientation: portrait) {
+	.AboutMe {
+		.AboutMe-footer {
+			.AboutMe-btn {
+				text-align: center;
+				padding: 0.4em 0.3em 0.4em 0.3em;
+			}
+		}
+	}
 	.App {
 		.App-content {
 			grid-template-columns: 0 0 auto 0 0;

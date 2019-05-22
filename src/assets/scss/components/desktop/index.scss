@@ -4,7 +4,7 @@
 @media (max-width: 150em) and (orientation: landscape) {
 	.App {
 		.App-content {
-			grid-template-rows: 15em auto;
+			grid-template-rows: 10em auto;
 			grid-template-columns: 10em 20em auto 20em 10em;
 		}
 	}
@@ -13,6 +13,9 @@
 // Smaller screen all orientation
 @media (max-width: 100em) {
 	.App {
+		.App-content {
+			grid-template-rows: 7em auto;
+		}
 		&:before {
 			background-image: url('/img/bg3_mobile.jpg');
 		}
@@ -26,7 +29,6 @@
 	}
 	.App {
 		.App-content {
-			grid-template-rows: 10em auto;
 			grid-template-columns: 4em 20em auto 20em 4em;
 		}
 	}

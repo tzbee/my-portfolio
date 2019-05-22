@@ -4,8 +4,13 @@
 @media (max-width: 100em) and (orientation: portrait) {
 	.App {
 		.App-content {
+			grid-template-rows: 9em auto;
 			grid-template-columns: 0 0 auto 0 0;
 		}
+	}
+
+	.menu {
+		font-size: 0.9em;
 	}
 
 	.ProjectList-content {

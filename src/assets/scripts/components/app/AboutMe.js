@@ -11,7 +11,7 @@ const AboutMe = ({ className = '', resumeURL }) => {
 			<p>Hi, </p>
 			<p>My name is Amine.</p>
 			<p>
-				I am a <strong>software enthousiast</strong> and{' '}
+				I am a <strong>software enthusiast</strong> and{' '}
 				<strong>full stack web developer</strong>.
 			</p>
 			<div className="AboutMe-footer">
@@ -24,14 +24,6 @@ const AboutMe = ({ className = '', resumeURL }) => {
 					</span>
 					<span className="AboutMe-checkStuff-btn-chevron fas fa-chevron-right" />
 				</Link>
-				{/*				<a
-					className="AboutMe-btn AboutMe-hire-btn"
-					target="_blank"
-					rel="noopener noreferrer"
-					href={resumeURL}
-				>
-					Hire me
-				</a>*/}
 			</div>
 		</div>
 	);

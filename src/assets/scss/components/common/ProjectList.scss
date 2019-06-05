@@ -17,7 +17,7 @@
 			box-sizing: border-box;
 			display: inline-block;
 			margin: 1em;
-			font-size: 0.8em;
+			font-size: 0.75em;
 			.Project-url {
 				display: inline-block;
 				text-decoration: none;
@@ -35,10 +35,9 @@
 					width: 25.6em;
 					height: 16em;
 					background-color: $LYNX_WHITE;
-					border-radius: 0.25em;
 					overflow: hidden;
-					border-top-left-radius: 0.25em;
-					border-top-right-radius: 0.25em;
+					border-bottom-left-radius: 0.4em;
+					border-bottom-right-radius: 0.4em;
 
 					&.Project-thumbnail-logo {
 						display: flex;

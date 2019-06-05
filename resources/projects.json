@@ -1,5 +1,22 @@
 [
 	{
+		"id": 7,
+		"title": "This portfolio",
+		"thumbnail": "/img/projects/pj3_thb.png",
+		"url": "/",
+		"tags": [
+			"HTML5",
+			"CSS",
+			"JavaScript",
+			"React",
+			"Responsive",
+			"ExpressJS",
+			"NodeJS",
+			"Webpack",
+			"Sass"
+		]
+	},
+	{
 		"id": 1,
 		"title": "Nutricount",
 		"thumbnail": "/img/projects/pj1_thb.png",
@@ -69,6 +86,7 @@
 		"url": "http://tictactoe.tzbee.me",
 		"tags": ["HTML5", "CSS", "JavaScript", "Game", "AI"]
 	},
+
 	{
 		"id": 6,
 		"title": "All projects",

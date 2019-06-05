@@ -6,6 +6,9 @@ import PropTypes from 'prop-types';
 import TagList from './TagList';
 import ProjectList from './ProjectList';
 
+import SimpleBar from 'simplebar-react';
+import 'simplebar/dist/simplebar.css';
+
 const DEFAULT_STATE = {
 	selectedTags: [],
 	filteredProjects: []
@@ -61,7 +64,9 @@ class MyProjects extends Component {
 					/>
 				</div>
 				<div className="MyProjects-list">
-					<ProjectList projects={filteredProjects} />
+					<SimpleBar className="MyProjects-list-scrollBar">
+						<ProjectList projects={filteredProjects} />
+					</SimpleBar>
 				</div>
 			</div>
 		);

@@ -17,5 +17,9 @@
 	.MyProjects-list {
 		flex: 1 1 auto;
 		overflow: auto;
+
+		.MyProjects-list-scrollBar {
+			height: 100%;
+		}
 	}
 }

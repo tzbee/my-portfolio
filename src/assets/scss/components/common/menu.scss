@@ -18,7 +18,7 @@
 		color: $LYNX_WHITE;
 		font-family: 'Viga', sans-serif;
 
-		.menu-item {
+		.MenuItem {
 			padding-bottom: 1em;
 			margin: 0 1.8em 0 1.8em;
 			box-sizing: border-box;
@@ -30,12 +30,11 @@
 			cursor: pointer;
 			border-bottom: solid 0.2em rgba(0, 0, 0, 0);
 			outline: none;
-			user-select: none;
 
-			&:hover:not(.menu-item--selected) {
+			&:hover:not(.MenuItem--selected) {
 				color: $HINT_OF_PENSIVE;
 			}
-			&.menu-item--selected {
+			&.MenuItem--selected {
 				border-bottom: solid 0.2em $FLOWER;
 			}
 		}

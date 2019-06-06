@@ -19,30 +19,18 @@ const MenuItems = ({
 
 	return (
 		<div className={`MenuItems ${className}`}>
-			<Link
-				to="/"
-				className={`menu-item ${
-					id === undefined ? 'menu-item--selected' : ''
-				}`}
-			>
-				HOME
-			</Link>
-			<Link
-				to="/projects"
-				className={`menu-item ${
-					id === 'projects' ? 'menu-item--selected' : ''
-				}`}
-			>
-				PROJECTS
-			</Link>
-			<Link
-				to="/contact"
-				className={`menu-item ${
-					id === 'contact' ? 'menu-item--selected' : ''
-				}`}
-			>
-				CONTACT
-			</Link>
+			<MenuItem title="HOME" url="/" isSelected={id === undefined} />
+			<MenuItem
+				title="PROJECTS"
+				url="/projects"
+				isSelected={id === 'projects'}
+			/>
+			<MenuItem
+				className=""
+				title="CONTACT"
+				url="/contact"
+				isSelected={id === 'contact'}
+			/>
 		</div>
 	);
 };
@@ -52,6 +40,28 @@ MenuItems.displayName = 'MenuItems';
 MenuItems.propTypes = {
 	className: PropTypes.string,
 	match: PropTypes.object
+};
+
+const MenuItem = ({ className = '', title, url, isSelected }) => {
+	const selectedClass = isSelected ? 'MenuItem--selected' : '';
+	return (
+		<Link
+			className={`MenuItem ${className} ${selectedClass} user-select-disabled`}
+			to={url}
+		>
+			{title}
+		</Link>
+	);
+};
+
+MenuItem.displayName = 'MenuItem';
+
+MenuItem.propTypes = {
+	className: PropTypes.string,
+	id: PropTypes.string,
+	title: PropTypes.string,
+	url: PropTypes.string,
+	isSelected: PropTypes.bool
 };
 
 export default MenuItems;

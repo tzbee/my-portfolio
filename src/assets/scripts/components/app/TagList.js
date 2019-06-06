@@ -33,6 +33,7 @@ const TagList = ({
 							tag={tag}
 							selected={selectedTags.includes(tag)}
 							onClick={handleTagClick}
+							className="user-select-disabled"
 						/>
 					)
 			)}

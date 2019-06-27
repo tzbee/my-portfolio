@@ -13,7 +13,7 @@
 		font-weight: bold;
 	}
 	p {
-		width: 20em;
+		width: 25em;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -21,6 +21,7 @@
 		text-decoration: underline;
 		cursor: pointer;
 		color: inherit;
+		font-size: 0.8em;
 
 		&:hover {
 			color: $FLOWER;

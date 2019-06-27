@@ -23,6 +23,16 @@ const Contact = ({ className = '' }) => {
 					https://github.com/tzbee
 				</a>
 			</p>
+			<p>
+				<strong>linkedin</strong>{' '}
+				<a
+					href="https://linkedin.com/in/amine-tolba"
+					rel="noopener noreferrer"
+					target="_blank"
+				>
+					https://linkedin.com/in/amine-tolba
+				</a>
+			</p>
 		</div>
 	);
 };

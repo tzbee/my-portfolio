@@ -61,6 +61,25 @@
 		]
 	},
 	{
+		"id": 8,
+		"title": "Feedback System",
+		"thumbnail": "/img/projects/Octocat.png",
+		"url": "https://github.com/tzbee/feedback",
+		"tags": [
+			"HTML5",
+			"CSS",
+			"Chrome",
+			"Java",
+			"Hibernate",
+			"PostgreSQL",
+			"RESTful API",
+			"Servlet",
+			"JavaScript",
+			"JQuery",
+			"GitHub"
+		]
+	},
+	{
 		"id": 2,
 		"title": "Connect 4",
 		"thumbnail": "/img/projects/pj2_thb.png",

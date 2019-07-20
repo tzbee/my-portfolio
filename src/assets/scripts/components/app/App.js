@@ -1,27 +1,13 @@
 // App.js
 
-import React from 'react';
-import AboutMe from './AboutMe';
-import Contact from './Contact';
-import MenuItems from './MenuItems';
-import MyProjects from './MyProjects';
+import React from "react";
+import AboutMe from "./AboutMe";
+import Contact from "./Contact";
+import MenuItems from "./MenuItems";
+import MyProjects from "./MyProjects";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-const projects = require('../../../../../resources/projects.json');
-
-const tags = Object.keys(
-	projects
-		.map(({ tags = [] }) => tags)
-		.reduce((tagMap, tags) => {
-			tags.forEach(tag => {
-				tagMap[tag] = true;
-			});
-			return tagMap;
-		}, {})
-).sort();
-
-const resumeURL = 'resources/resume.pdf';
+const resumeURL = "resources/resume.pdf";
 
 const App = () => {
 	return (
@@ -47,10 +33,7 @@ const App = () => {
 							path="/projects"
 							component={() => (
 								<div className="App-projects">
-									<MyProjects
-										tags={tags}
-										projects={projects}
-									/>
+									<MyProjects />
 								</div>
 							)}
 						/>

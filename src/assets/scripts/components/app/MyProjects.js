@@ -1,18 +1,24 @@
 // MyProjects.js;tagstags
 
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import TagList from './TagList';
-import ProjectList from './ProjectList';
+import TagList from "./TagList";
+import ProjectList from "./ProjectList";
 
-import SimpleBar from 'simplebar-react';
-import 'simplebar/dist/simplebar.css';
+import SimpleBar from "simplebar-react";
+import "simplebar/dist/simplebar.css";
+
+import ProjectLoader from "../../ProjectLoader";
 
 const DEFAULT_STATE = {
+	projects: [],
+	tags: [],
 	selectedTags: [],
 	filteredProjects: []
 };
+
+const projectLoader = new ProjectLoader();
 
 class MyProjects extends Component {
 	constructor(props) {
@@ -21,16 +27,17 @@ class MyProjects extends Component {
 	}
 
 	componentDidMount() {
-		this._filterProjects();
+		this._loadProjects().then(() => {
+			this._filterProjects();
+		});
 	}
 
 	_filterProjects() {
 		this.setState(state => {
-			const { projects } = this.props;
-			const { selectedTags } = state;
+			const { selectedTags, projects } = state;
 
 			const filteredProjects = projects.filter(({ tags = [] }) => {
-				if (tags.includes('*')) {
+				if (tags.includes("*")) {
 					return true;
 				}
 				return selectedTags.every(selectedTag =>
@@ -42,6 +49,25 @@ class MyProjects extends Component {
 		});
 	}
 
+	_loadProjects() {
+		return projectLoader.load().then(projects => {
+			const tags = Object.keys(
+				projects
+					.map(({ tags = [] }) => tags)
+					.reduce((tagMap, tags) => {
+						tags.forEach(tag => {
+							tagMap[tag] = true;
+						});
+						return tagMap;
+					}, {})
+			).sort();
+
+			this.setState(state => {
+				return Object.assign({}, state, { projects, tags });
+			});
+		});
+	}
+
 	_handleSelectedTagsChange(newSelectedTags) {
 		this.setState(state =>
 			Object.assign({}, state, { selectedTags: newSelectedTags })
@@ -50,8 +76,7 @@ class MyProjects extends Component {
 	}
 
 	render() {
-		const { tags } = this.props;
-		const { filteredProjects, selectedTags } = this.state;
+		const { filteredProjects, selectedTags, tags } = this.state;
 		return (
 			<div className="MyProjects">
 				<div className="MyProjects-tagList">

@@ -4,7 +4,7 @@ import React from "react";
 import AboutMe from "./AboutMe";
 import Contact from "./Contact";
 import MenuItems from "./MenuItems";
-import MyProjects from "./MyProjects";
+import MyProjectsContainer from "./MyProjectsContainer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const resumeURL = "resources/resume.pdf";
@@ -33,7 +33,7 @@ const App = () => {
 							path="/projects"
 							render={() => (
 								<div className="App-projects">
-									<MyProjects />
+									<MyProjectsContainer />
 								</div>
 							)}
 						/>

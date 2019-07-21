@@ -9,76 +9,39 @@ import ProjectList from "./ProjectList";
 import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.css";
 
-import ProjectLoader from "../../ProjectLoader";
-
-const DEFAULT_STATE = {
-	projects: [],
-	tags: [],
-	selectedTags: [],
-	filteredProjects: []
-};
-
-const projectLoader = new ProjectLoader();
+import { connect } from "react-redux";
+import {
+	loadProjectsAction,
+	updateSelectedTagsAction
+} from "../../actions/actions";
 
 class MyProjects extends Component {
 	constructor(props) {
 		super(props);
-		this.state = DEFAULT_STATE;
 	}
 
 	componentDidMount() {
-		this._loadProjects().then(() => {
-			this._filterProjects();
-		});
-	}
-
-	_filterProjects() {
-		this.setState(state => {
-			const { selectedTags, projects } = state;
-
-			const filteredProjects = projects.filter(({ tags = [] }) => {
-				if (tags.includes("*")) {
-					return true;
-				}
-				return selectedTags.every(selectedTag =>
-					tags.includes(selectedTag)
-				);
-			});
-
-			return Object.assign({}, state, { filteredProjects });
-		});
-	}
-
-	_loadProjects() {
-		return projectLoader.load().then(projects => {
-			const tags = Object.keys(
-				projects
-					.map(({ tags = [] }) => tags)
-					.reduce((tagMap, tags) => {
-						tags.forEach(tag => {
-							tagMap[tag] = true;
-						});
-						return tagMap;
-					}, {})
-			).sort();
-
-			this.setState(state => {
-				return Object.assign({}, state, { projects, tags });
-			});
-		});
+		const { projectsLoaded, loadProjects } = this.props;
+		if (!projectsLoaded) {
+			loadProjects();
+		}
 	}
 
 	_handleSelectedTagsChange(newSelectedTags) {
-		this.setState(state =>
-			Object.assign({}, state, { selectedTags: newSelectedTags })
-		);
-		this._filterProjects();
+		const { onSelectedTagsChange } = this.props;
+		onSelectedTagsChange(newSelectedTags);
 	}
 
 	render() {
-		const { filteredProjects, selectedTags, tags } = this.state;
+		const {
+			className = "",
+			projects = [],
+			selectedTags,
+			tags
+		} = this.props;
+
 		return (
-			<div className="MyProjects">
+			<div className={`MyProjects ${className}`}>
 				<div className="MyProjects-tagList">
 					<TagList
 						tags={tags}
@@ -90,7 +53,7 @@ class MyProjects extends Component {
 				</div>
 				<div className="MyProjects-list">
 					<SimpleBar className="MyProjects-list-scrollBar">
-						<ProjectList projects={filteredProjects} />
+						<ProjectList projects={projects} />
 					</SimpleBar>
 				</div>
 			</div>
@@ -98,8 +61,60 @@ class MyProjects extends Component {
 	}
 }
 
+MyProjects.displayName = "MyProjects";
+
 MyProjects.propTypes = {
+	className: PropTypes.string,
+	projects: PropTypes.array,
+	selectedTags: PropTypes.array,
 	tags: PropTypes.array,
-	projects: PropTypes.array
+	onSelectedTagsChange: PropTypes.func,
+	projectsLoaded: PropTypes.bool,
+	loadProjects: PropTypes.func
 };
-export default MyProjects;
+
+const mapDispatchToProps = dispatch => {
+	return {
+		loadProjects: () => dispatch(loadProjectsAction()),
+		onSelectedTagsChange: newSelectedTags =>
+			dispatch(updateSelectedTagsAction(newSelectedTags))
+	};
+};
+
+const filterProjects = (projects, selectedTags) => {
+	return projects.filter(({ tags = [] }) => {
+		if (tags.includes("*")) {
+			return true;
+		}
+		return selectedTags.every(selectedTag => tags.includes(selectedTag));
+	});
+};
+
+const getAllTagsFromProjects = projects => {
+	return Object.keys(
+		projects
+			.map(({ tags = [] }) => tags)
+			.reduce((tagMap, tags) => {
+				tags.forEach(tag => {
+					tagMap[tag] = true;
+				});
+				return tagMap;
+			}, {})
+	).sort();
+};
+
+const mapStateToProps = ({
+	projects,
+	selectedTags,
+	projectsLoaded = false
+}) => ({
+	projects: filterProjects(projects, selectedTags),
+	selectedTags,
+	tags: getAllTagsFromProjects(projects),
+	projectsLoaded
+});
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(MyProjects);

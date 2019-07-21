@@ -22,7 +22,7 @@ const App = () => {
 					<Route
 						path="/"
 						exact
-						component={() => (
+						render={() => (
 							<div className="App-aboutMe">
 								<AboutMe />
 							</div>
@@ -31,7 +31,7 @@ const App = () => {
 					<Switch>
 						<Route
 							path="/projects"
-							component={() => (
+							render={() => (
 								<div className="App-projects">
 									<MyProjects />
 								</div>
@@ -39,14 +39,14 @@ const App = () => {
 						/>
 						<Route
 							path="/contact"
-							component={() => (
+							render={() => (
 								<div className="App-contact">
 									<Contact />
 								</div>
 							)}
 						/>
 						<Route
-							component={() => (
+							render={() => (
 								<div className="App-aboutMe">
 									<AboutMe resumeURL={resumeURL} />
 								</div>

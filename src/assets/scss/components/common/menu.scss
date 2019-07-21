@@ -16,7 +16,7 @@
 		display: flex;
 		flex-flow: row;
 		color: $LYNX_WHITE;
-		font-family: 'Viga', sans-serif;
+		font-family: "Viga", sans-serif;
 
 		.MenuItem {
 			padding-bottom: 1em;
@@ -25,8 +25,8 @@
 			display: flex;
 			flex-flow: row;
 			color: $LYNX_WHITE;
-			font-family: 'Viga', sans-serif;
-			font-size: 1.5em;
+			font-family: "Viga", sans-serif;
+			font-size: 1.3em;
 			cursor: pointer;
 			border-bottom: solid 0.2em rgba(0, 0, 0, 0);
 			outline: none;

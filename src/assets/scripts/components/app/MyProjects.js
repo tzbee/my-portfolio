@@ -9,9 +9,14 @@ import ProjectList from "./ProjectList";
 import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.css";
 
-const MyProjects = ({ className = "", projects = [], selectedTags, tags }) => {
+const MyProjects = ({
+	className = "",
+	projects = [],
+	selectedTags,
+	tags,
+	onSelectedTagsChange
+}) => {
 	const handleSelectedTagsChange = newSelectedTags => {
-		const { onSelectedTagsChange } = this.props;
 		onSelectedTagsChange(newSelectedTags);
 	};
 

@@ -26,7 +26,12 @@ class MyProjectsContainer extends Component {
 	}
 
 	render() {
-		const { className = "", projectsLoaded, ...rest } = this.props;
+		const {
+			className = "",
+			projectsLoaded,
+			loadProjects,
+			...rest
+		} = this.props;
 		return (
 			<div className={`MyProjectsContainer ${className}`}>
 				{projectsLoaded ? <MyProjects {...rest} /> : <Loader />}

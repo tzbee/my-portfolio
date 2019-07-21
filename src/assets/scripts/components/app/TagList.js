@@ -1,12 +1,13 @@
 // TagList.js;
 
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 const TagList = ({
-	className = '',
+	className = "",
 	tags = [],
 	selectedTags = [],
+	highlightedTags = [],
 	onSelectedTagsChange
 }) => {
 	const handleTagClick = tag => {
@@ -27,11 +28,12 @@ const TagList = ({
 			{tags.map(
 				tag =>
 					tag &&
-					tag !== '*' && (
+					tag !== "*" && (
 						<Tag
-							key={'tag-' + tag}
+							key={"tag-" + tag}
 							tag={tag}
 							selected={selectedTags.includes(tag)}
+							highlighted={highlightedTags.includes(tag)}
 							onClick={handleTagClick}
 							className="user-select-disabled"
 						/>
@@ -41,22 +43,32 @@ const TagList = ({
 	);
 };
 
-TagList.displayName = 'TagList';
+TagList.displayName = "TagList";
 
 TagList.propTypes = {
 	className: PropTypes.string,
 	tags: PropTypes.array,
 	selectedTags: PropTypes.array,
+	highlightedTags: PropTypes.array,
 	onSelectedTagsChange: PropTypes.func
 };
 
-const Tag = ({ className = '', tag, selected = false, onClick }) => {
+const Tag = ({
+	className = "",
+	tag,
+	selected = false,
+	highlighted = false,
+	onClick
+}) => {
 	const handleClick = () => {
 		onClick(tag);
 	};
+	const selectedClass = selected ? "Tag-selected" : "";
+	const highlightedClass = highlighted ? "Tag-highlighted" : "";
+
 	return (
 		<a
-			className={`Tag ${className} ${selected ? 'Tag-selected' : ''}`}
+			className={`Tag ${className} ${selectedClass} ${highlightedClass}`}
 			onClick={handleClick}
 		>
 			{tag}
@@ -64,13 +76,14 @@ const Tag = ({ className = '', tag, selected = false, onClick }) => {
 	);
 };
 
-Tag.displayName = 'Tag';
+Tag.displayName = "Tag";
 
 Tag.propTypes = {
 	className: PropTypes.string,
 	tag: PropTypes.string,
 	onClick: PropTypes.func,
-	selected: PropTypes.bool
+	selected: PropTypes.bool,
+	highlighted: PropTypes.bool
 };
 
 export default TagList;

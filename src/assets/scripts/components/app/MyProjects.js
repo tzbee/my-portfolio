@@ -1,6 +1,6 @@
 // MyProjects.js;tagstags
 
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 import TagList from "./TagList";
@@ -12,9 +12,12 @@ import "simplebar/dist/simplebar.css";
 const MyProjects = ({
 	className = "",
 	projects = [],
-	selectedTags,
+	selectedTags = [],
+	highlightedTags = [],
 	tags,
-	onSelectedTagsChange
+	onSelectedTagsChange,
+	onProjectMouseOver,
+	onProjectMouseOut
 }) => {
 	const handleSelectedTagsChange = newSelectedTags => {
 		onSelectedTagsChange(newSelectedTags);
@@ -26,6 +29,7 @@ const MyProjects = ({
 				<TagList
 					tags={tags}
 					selectedTags={selectedTags.slice()}
+					highlightedTags={highlightedTags.slice()}
 					onSelectedTagsChange={newSelectedTags =>
 						handleSelectedTagsChange(newSelectedTags)
 					}
@@ -33,7 +37,11 @@ const MyProjects = ({
 			</div>
 			<div className="MyProjects-list">
 				<SimpleBar className="MyProjects-list-scrollBar">
-					<ProjectList projects={projects} />
+					<ProjectList
+						projects={projects}
+						onProjectMouseOver={onProjectMouseOver}
+						onProjectMouseOut={onProjectMouseOut}
+					/>
 				</SimpleBar>
 			</div>
 		</div>
@@ -46,10 +54,13 @@ MyProjects.propTypes = {
 	className: PropTypes.string,
 	projects: PropTypes.array,
 	selectedTags: PropTypes.array,
+	highlightedTags: PropTypes.array,
 	tags: PropTypes.array,
 	onSelectedTagsChange: PropTypes.func,
 	projectsLoaded: PropTypes.bool,
-	loadProjects: PropTypes.func
+	loadProjects: PropTypes.func,
+	onProjectMouseOver: PropTypes.func,
+	onProjectMouseOut: PropTypes.func
 };
 
 export default MyProjects;

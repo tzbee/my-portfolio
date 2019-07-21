@@ -1,5 +1,8 @@
 // TagList.scss
 
+$SELECTED_COLOR: $FLOWER;
+$HIGHLIGHTED_COLOR: $FLOWER;
+
 .TagList {
 	width: 80%;
 	display: flex;
@@ -25,8 +28,13 @@
 		}
 
 		&.Tag-selected {
-			color: $FLOWER;
-			border-color: $FLOWER;
+			color: $SELECTED_COLOR !important;
+			border-color: $SELECTED_COLOR !important;
+		}
+
+		&.Tag-highlighted {
+			color: $LYNX_WHITE;
+			border-color: $HIGHLIGHTED_COLOR;
 		}
 	}
 }

@@ -18,3 +18,8 @@ export const updateSelectedTagsAction = newSelectedTags => ({
 	type: "UPDATE_SELECTED_TAGS",
 	newSelectedTags
 });
+
+export const updateHighlightedTagsAction = newHighlightedTags => ({
+	type: "UPDATE_HIGHLIGHTED_TAGS",
+	newHighlightedTags
+});

@@ -3,7 +3,8 @@ import MyProjects from "./MyProjects";
 import { connect } from "react-redux";
 import {
 	loadProjectsAction,
-	updateSelectedTagsAction
+	updateSelectedTagsAction,
+	updateHighlightedTagsAction
 } from "../../actions/actions";
 
 import React, { Component } from "react";
@@ -52,7 +53,10 @@ const mapDispatchToProps = dispatch => {
 	return {
 		loadProjects: () => dispatch(loadProjectsAction()),
 		onSelectedTagsChange: newSelectedTags =>
-			dispatch(updateSelectedTagsAction(newSelectedTags))
+			dispatch(updateSelectedTagsAction(newSelectedTags)),
+		onProjectMouseOver: project =>
+			dispatch(updateHighlightedTagsAction(project.tags)),
+		onProjectMouseOut: () => dispatch(updateHighlightedTagsAction([]))
 	};
 };
 
@@ -81,10 +85,12 @@ const getAllTagsFromProjects = projects => {
 const mapStateToProps = ({
 	projects,
 	selectedTags,
+	highlightedTags,
 	projectsLoaded = false
 }) => ({
 	projects: filterProjects(projects, selectedTags),
 	selectedTags,
+	highlightedTags,
 	tags: getAllTagsFromProjects(projects),
 	projectsLoaded
 });

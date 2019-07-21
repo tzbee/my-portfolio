@@ -13,6 +13,10 @@
 		display: flex;
 		justify-content: center;
 		margin-bottom: 1em;
+
+		.Tag {
+			font-size: 1em;
+		}
 	}
 	.MyProjects-list {
 		flex: 1 1 auto;

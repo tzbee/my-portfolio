@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-const apiURL = "https://portfolio-with-service.herokuapp.com/api/projects";
+const apiURL = "https://tzbee-portfolio-api.herokuapp.com/api/projects";
 
 export default class ProjectLoader {
 	load() {

@@ -1,6 +1,6 @@
 const http = require("http");
 const urls = [
-	// "http://www.aminetolba.me/",
+	"http://www.aminetolba.me/",
 	"http://tzbee-portfolio-api.herokuapp.com/api/projects"
 ];
 

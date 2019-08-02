@@ -5,6 +5,8 @@ const port = process.env.PORT || 3000;
 
 const path = require("path");
 
+const pingThis = require("./ping");
+
 if (app.get("env") == "development") {
 	var browserSync = require("browser-sync");
 	var config = {
@@ -30,3 +32,5 @@ app.use("/", (req, res) => {
 });
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
+
+pingThis();
